@@ -1,0 +1,13 @@
+# Настройки сервера
+    DirectoryIndex index.html
+    ErrorDocument 404 /404.html
+
+    # Кеширование
+    <FilesMatch "\.(html|htm)$">
+      Header set Cache-Control "max-age=0, private, must-revalidate"
+    </FilesMatch>
+
+    <FilesMatch "\.(css|js|jpg|jpeg|png|gif|ico)$">
+      Header set Cache-Control "max-age=2592000, public"
+    </FilesMatch>
+    
